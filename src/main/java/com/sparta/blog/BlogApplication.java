@@ -24,7 +24,7 @@ public class BlogApplication {
     @Bean
     public CommandLineRunner demo(BlogRepository blogRepository, BlogService blogService) {
         return (args) -> {
-            blogRepository.save(new Blog("테스트 게시글", "강병욱", "내용 테스트입니다.", "1234"));
+            blogRepository.save(new Blog("테스트 게시글", "작성자", "내용 테스트입니다.", "1234"));
 
             System.out.println("데이터 인쇄");
             List<Blog> blogList = blogRepository.findAll();
@@ -37,6 +37,8 @@ public class BlogApplication {
                 System.out.println(blog.getPassword());
 
             }
+
+
 
         };
 

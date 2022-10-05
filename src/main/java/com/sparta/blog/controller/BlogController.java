@@ -16,6 +16,7 @@ import java.util.Optional;
 public class BlogController {
 
     private final BlogRepository blogRepository;
+    private final BlogService blogService;
 
     @GetMapping("/api/blogs")
     public List<Blog> getBlogs() {
@@ -34,7 +35,7 @@ public class BlogController {
 
 
 
-    private final BlogService blogService;
+
 
     // PostMapping을 통해서, 같은 주소라도 방식이 다름을 구분합니다.
     @PostMapping("/api/blogs")
